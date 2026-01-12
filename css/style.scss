@@ -1,0 +1,109 @@
+#btn-start{
+    background-color: rgb(252, 222, 57);
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 30px;
+    &:hover{
+        background-color: rgb(255, 252, 83);
+        transition: all 0.3s ease;
+    }
+}
+#quiz-box{
+    width: 550px;
+    
+    justify-content: center;
+    align-items: center;
+    background-color: #d1d1d1;
+    
+    border: solid 1px #d1d1d1;
+    border-radius: 5px;
+
+    #header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        #header-title{
+            font-size: 30px;
+            margin: 0 15px;
+        }
+        #time-box{
+            display: flex;
+            align-items: center;
+            background-color: rgb(6, 116, 6);
+            border: solid 1px rgb(6, 116, 6);
+            border-radius: 5px;
+            padding: 0 5px;
+            margin: 10px;
+            
+            #time-title{
+                font-size: 18px;
+                margin: 0;
+            }
+            #timer{
+                background-color: rgb(252, 222, 57);
+                padding: 10px;
+                margin: 5px;
+                font-size: 16px;
+                border: solid 1px rgb(252, 222, 57);
+                border-radius: 5px;
+                
+            }
+        }
+    }
+    #question-box{
+        
+        background-color: #fff;
+        padding: 10px 0;
+        .card-body{
+            .soru-text{
+                margin: 0 20px;
+                font-size: 27px;
+            }
+            .option-list{
+                margin: 15px 10px 0 10px;
+                font-size: 18px;
+                .option{
+                    text-align: start;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    &.correct{
+                        background-color: rgb(17, 226, 17) !important;
+                    }
+                    &.false{
+                        background-color: rgb(180, 2, 2);
+                    }
+                    &.disabled{
+                    pointer-events: none;
+                    opacity: 0.6;
+                }
+                }
+                
+            }
+        }
+    }
+    #footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .badge{
+            margin: 15px;
+        }
+        .btn-next{
+            background-color: rgb(71, 70, 70);
+            color: #fff;
+            border-radius: 5px;
+            padding: 5px 7px;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+            &:hover{
+                background-color: rgb(187, 185, 185);
+                border-color: rgb(187, 185, 185);
+            }
+        }
+    }
+}
+#score{
+
+}
