@@ -1,7 +1,7 @@
 function UI(){
     this.questionBox = document.querySelector("#question-box");
     this.btnNext = document.querySelector(".btn-next");
-    this.scoreBox = document.querySelector("#score");
+    this.scoreBox = document.querySelector(".score-table");
     this.quizBox = document.querySelector("#quiz-box");
     this.btnStart = document.querySelector("#btn-start")
     this.btnReplay = document.querySelector(".btn-replay");
@@ -9,7 +9,10 @@ function UI(){
     this.soruSayisi = document.querySelector(".soru-sayisi");
     this.falseIcon = `<i class="bi bi-x-circle"></i>`;
     this.correctIcon = `<i class="bi bi-check-circle"></i>`
-    
+    this.timeFlow = document.querySelector(".time-flow");
+    this.timer =document.querySelector("#timer");
+    this.option = document.querySelector(".option");
+    this.scorePoint = document.querySelector(".score-point");
 }
 
 

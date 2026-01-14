@@ -23,6 +23,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
         #header-title{
             font-size: 30px;
             margin: 0 15px;
@@ -50,6 +51,16 @@
                 
             }
         }
+        .time-flow{
+            height: 6px;
+            bottom: 0;
+            position: absolute;
+            width: 100%;
+            animation: time-flow 10s linear forwards;
+            animation-play-state: running;
+            
+            background-color: rgb(252, 222, 57);
+        }
     }
     #question-box{
         
@@ -70,9 +81,11 @@
                     align-items: center;
                     &.correct{
                         background-color: rgb(17, 226, 17) !important;
+                        color: #fff;
                     }
                     &.false{
                         background-color: rgb(180, 2, 2);
+                        color: #fff;
                     }
                     &.disabled{
                     pointer-events: none;
@@ -97,6 +110,9 @@
             padding: 5px 7px;
             margin: 0 10px;
             transition: all 0.3s ease;
+            &.d-block{
+                animation: btn-next-anim 0.5s;
+            }
             &:hover{
                 background-color: rgb(187, 185, 185);
                 border-color: rgb(187, 185, 185);
@@ -104,6 +120,48 @@
         }
     }
 }
-#score{
+.score-table{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px;
+    border-radius: 5px;
+    padding: 70px;
+    text-align: center;
+    .bi-award-fill{
+        font-size: 150px;
+        
+    }
+    .score-point{
+            font-size: 25px;
+    font-weight: 700;
+    }
+    #score-buttons{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin: 15px 0;
+        padding: 30px 0 0 0;
+        .btn{
+            padding: 15px 30px;
+        }
+    }
+}
+@keyframes time-flow{
+    from{
+        width: 0%;
+    }to{
+        width: 100%;
+    }
+}
 
+@keyframes btn-next-anim{
+    from{
+        opacity: 0.5;
+        transform: scale(0.6);
+    }to{
+        opacity: 1;
+        transform: scale(1);
+    }
 }
